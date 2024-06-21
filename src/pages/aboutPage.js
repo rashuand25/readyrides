@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../components/footerComponent';
 
 const AboutPage = () => {
     return (
@@ -38,6 +39,7 @@ const AboutPage = () => {
                 <p>Here at Ready Rides we have a 'creed'... No job is TOO small and no job is TOO big! Need a small compact vehicle to make a quick unplanned trip with pet or child... We got you covered. Need a large truck or van because your moving... We got you covered... Need a fleet of 5 or even 10 monster trucks to move dirt around... Again we have you COVERED!!! For best service and accomodations we highly recommend that you inquire with us at your earliest convenince about your needs so that we can make sure we have you COVERED for your larger jobs/projects. </p>
                
             </div>
+            <Footer />
         </>
     );
 }
