@@ -12,7 +12,7 @@ const Car = ({ car }) => (
   </div>
 );
 
-// The AllProductsPage component
+//AllProductsPage component
 const AllProductsPage = () => {
   const [cars, setCars] = useState([]);
   const [loading, setLoading] = useState(true);

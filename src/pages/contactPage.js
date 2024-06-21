@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 
-const ContactUs = () => {
+const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -25,10 +25,10 @@ const ContactUs = () => {
   return (
     <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2rem', height: '100vh' }}>
       <div style={{ position: 'absolute', left: 0, padding: '2rem', backgroundColor: '#f7f7f7', width: '20%' }}>
-        <h3>Our Company</h3>
-        <p><strong>Address:</strong> 123 Business Rd, Business City, BX 12345</p>
+        <h3>Ready Rides</h3>
+        <p><strong>Address:</strong> 532 I'm Here Now St, Business City, MS 12345</p>
         <p><strong>Phone:</strong> (123) 456-7890</p>
-        <p><strong>Email:</strong> contact@ourcompany.com</p>
+        <p><strong>Email:</strong> contact@ReadyRides.com</p>
         {/* Add more company details here */}
       </div>
       <div style={{ width: '40%', textAlign: 'center' }}>
@@ -73,4 +73,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default ContactPage;
