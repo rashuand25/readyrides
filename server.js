@@ -1,20 +1,41 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const mysql = require('mysql2');
-const bcrypt = require('bcryptjs');
 const app = express();
 const port = 3001;
 const db = require('./server/dbConnection');
 
-app.use(cors());
+// Middleware setup
+app.use(cors()); // Configure CORS before routes
+
+// Body parser middleware
 app.use(bodyParser.json());
 
-
 // Import route files
-const signupRoutes = require('./server/routes/signup');
-const loginRoutes = require('./server/routes/login');
+const signupRoutes = require('./src/signUpRoute');
 
 // Use the routes
-app.use('/signup', signupRoutes);
-// app.use('/login', loginRoutes);
+app.use('/signUpRoute', signupRoutes);
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err); // Log the error to the console
+
+  let statusCode = 500;
+  let message = 'Internal server error';
+
+  if (err instanceof SyntaxError) {
+    statusCode = 400;
+    message = 'Bad Request: Invalid JSON data';
+  } else if (err.name === 'UnauthorizedError') {
+    statusCode = 401;
+    message = 'Unauthorized: Invalid token';
+  } // Add more custom error handling as needed
+
+  res.status(statusCode).send({ status: statusCode, message });
+});
+
+// Start the server
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});

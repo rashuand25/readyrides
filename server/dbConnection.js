@@ -1,15 +1,23 @@
-// db.js
 const mysql = require('mysql2');
 
-// Create a pool of database connections
 const pool = mysql.createPool({
   host: 'localhost',
-  user: 'your_db_user',
-  password: 'your_db_password',
-  database: 'mydb', // Change this to your actual database name
+  user: 'rashuand25',
+  port: 3306,
+  password: 'coding101!',
+  database: 'mydb',
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
 });
 
-module.exports = pool.promise(); // Export the promise-based pool
+pool.getConnection((err, connection) => {
+  if (err) {
+    console.error('Error connecting to the database:', err);
+  } else {
+    console.log('Database connection established successfully on port 3306!');
+    connection.release(); // Release the connection
+  }
+});
+
+module.exports = pool.promise();
