@@ -3,7 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
 const port = 3001;
-const db = require('./server/dbConnection');
+const db = require('./src/server/dbConnection');
 
 // Middleware setup
 app.use(cors()); // Configure CORS before routes
@@ -12,10 +12,10 @@ app.use(cors()); // Configure CORS before routes
 app.use(bodyParser.json());
 
 // Import route files
-const signupRoutes = require('./src/signUpRoute');
+const signupRoutes = require('./src/server/routes/signUpRoute');
 
 // Use the routes
-app.use('/signUpRoute', signupRoutes);
+app.use('/', signupRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

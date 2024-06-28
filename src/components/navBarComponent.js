@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
 import SignInModal from './Modals/SignInModal';
 import SignUpModal from './Modals/SignUpModal';
@@ -10,11 +11,11 @@ const NavBarComponent = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link to="/">Home</Nav.Link>
-            <Nav.Link to="/products">Products</Nav.Link>
-            <Nav.Link to='/reservations'>Reservations</Nav.Link>
-            <Nav.Link to="/about">About</Nav.Link>
-            <Nav.Link to="/contact">Contact</Nav.Link>
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
+            <Nav.Link as={Link} to="/">Products</Nav.Link>
+            <Nav.Link as={Link} to="/">Reservations</Nav.Link>
+            <Nav.Link as={Link} to="/about">About</Nav.Link>
+            <Nav.Link as={Link} to="/contactUs">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
         <Nav className="ml-auto">

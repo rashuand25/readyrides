@@ -4,12 +4,10 @@ import ImageOne from '../images/aboutPage/pic1.jpg'
 import ImageTwo from '../images/aboutPage/pic2.jpg'
 import ImageThree from '../images/aboutPage/pic3.jpg'
 import Footer from '../components/footerComponent';
-import NavBarComponent from '../components/navBarComponent';
 
 const AboutPage = () => {
     return (
         <>
-            <NavBarComponent />
             <Container fluid style={{ padding: '2rem', backgroundColor: '#eee', textAlign: 'center' }}>
                 <h1>About Ready Rides</h1>
             </Container>

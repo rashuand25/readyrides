@@ -1,11 +1,9 @@
 import React from 'react';
 import Footer from '../components/footerComponent';
-import NavBarComponent from '../components/navBarComponent';
 
-const Error = () => {
+const ErrorPage = () => {
     return (
         <>
-            <NavBarComponent />
             <div style={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -13,7 +11,7 @@ const Error = () => {
                 alignItems: 'center',
                 height: '100vh' // Adjust as needed
             }}>
-                <h1>Error</h1>
+                <h1>errorPage</h1>
                 <p>Oops! Something went wrong. Please try again later.</p>
             </div>
             <Footer />
@@ -21,4 +19,4 @@ const Error = () => {
     );
 }
 
-export default Error;
+export default ErrorPage;

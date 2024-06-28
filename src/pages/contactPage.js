@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
-import NavBarComponent from '../components/navBarComponent';
 import Footer from '../components/footerComponent';
 
 const ContactPage = () => {
@@ -26,7 +25,6 @@ const ContactPage = () => {
 
   return (
     <>
-      <NavBarComponent />
       <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2rem', height: '100vh' }}>
         <div style={{ position: 'absolute', left: 0, padding: '2rem', backgroundColor: '#f7f7f7', width: '20%' }}>
           <h3>Ready Rides</h3>

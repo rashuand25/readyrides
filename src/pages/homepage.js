@@ -1,16 +1,15 @@
 import React from 'react';
 import { Container, Button, Card, } from 'react-bootstrap';
-import NavBarComponent from '../components/navBarComponent';
 import HomePageSedan from '../images/black_altima.jpg';
 import HomePageTruck from '../images/black_tahoe.jpg';
 import HomePageEconomy from '../images/black_chevy_cruze.jpg';
 import HomePageLuxury from '../images/black_infinitiQX80.jpg';
 import Footer from '../components/footerComponent';
+import PlaceHolders from '../components/vehicleCards';
 
 const HomePage = () => {
   return (
     <>
-      <NavBarComponent />
         <Container fluid style={{ padding: '2rem', backgroundColor: '#eee', textAlign: 'center' }}>
           <h1>Welcome to Ready Rides</h1>
           <p>Your ride is ready!</p>
