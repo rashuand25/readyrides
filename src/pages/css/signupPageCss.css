@@ -1,8 +1,18 @@
+.mainTitle {
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+.mainTitleText {
+    text-align: center;
+    padding-bottom: 2%;
+    
+}
+
 .formContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 .form {
@@ -11,9 +21,15 @@
     }
 
 .formFields {
-    width: 150%;
+    width: 90%;
+    height: 100%;
+}
+
+.formTitles {
+    text-align: center;
 }
 
 .signupBtn {
-    width: 150%;
+    width: 90%;
 }
+

@@ -19,7 +19,7 @@ const HomePage = () => {
 
       <h2 style={{ textAlign: 'center', marginTop: '4rem' }}>Featured Vehicles</h2>
       <Container style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem', marginTop: '4rem' }}>
-        <Card>
+        <Card className='cards'>
           <Card.Body>
             <Card.Title>Economy Car</Card.Title>
             <Card.Text>Perfect for city travel and those shorter distance trips.</Card.Text>
@@ -27,7 +27,7 @@ const HomePage = () => {
           </Card.Body>
         </Card>
 
-        <Card>
+        <Card className='cards'>
           <Card.Body>
             <Card.Title>Truck/SUV</Card.Title>
             <Card.Text>Spacious and comfortable. Ideal for long trips.</Card.Text>
@@ -35,7 +35,7 @@ const HomePage = () => {
           </Card.Body>
         </Card>
 
-        <Card>
+        <Card className='cards'>
           <Card.Body>
             <Card.Title>Luxury Car</Card.Title>
             <Card.Text>Travel in style with one of our premium luxury vehicles.</Card.Text>
@@ -43,7 +43,7 @@ const HomePage = () => {
           </Card.Body>
         </Card>
 
-        <Card>
+        <Card className='cards'>
           <Card.Body>
             <Card.Title>Sedan</Card.Title>
             <Card.Text>Perfect for smaller families or couples who don't need all the extra space.</Card.Text>

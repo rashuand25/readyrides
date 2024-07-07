@@ -14,7 +14,6 @@ const VehicleComponent = () => {
     },
     image: {
       width: '63%',
-      height: '',
       objectFit: 'cover', // This will scale the image while maintaining its aspect ratio
     },
     vehicleName: {

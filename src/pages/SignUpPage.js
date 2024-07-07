@@ -54,59 +54,63 @@ const SignUpPage = () => {
   };
 
   return (
-    <div className='formContainer'>
-      <form onSubmit={handleSubmit} className='form'>
-        <input
-          className='formFields'
-          type='text'
-          placeholder='First Name'
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
-          required
-        />
-        <input
-          className='formFields'
-          type='text'
-          placeholder='Last Name'
-          value={lastName}
-          onChange={(e) => setLastName(e.target.value)}
-          required
-        />
-        <input
-          className='formFields'
-          type='email'
-          placeholder='Email'
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          className='formFields'
-          type="tel"
-          placeholder="Phone Number"
-          value={phoneNumber}
-          onChange={(e) => setPhoneNumber(e.target.value)}
-          required
-        />
-        <input
-          className='formFields'
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          required
-        />
-        <input
-          className='formFields'
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <button type="submit" className='signupBtn'>Sign Up</button>
-      </form>
-    </div>
+    <>
+      <h1 className='mainTitle'>Sign Up!</h1>
+      <p className='mainTitleText'>Sign up today for news about our current and future deals and savings!!!</p>
+      <div className='formContainer'>
+        <form onSubmit={handleSubmit} className='form'>
+          <input
+            className='formFields'
+            type='text'
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            required
+          />
+          <p className='formTitles'>First Name</p>
+          <input
+            className='formFields'
+            type='text'
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            required
+          />
+          <p className='formTitles'>Last Name</p>
+          <input
+            className='formFields'
+            type='email'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <p className='formTitles'>Email</p>
+          <input
+            className='formFields'
+            type="tel"
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
+            required
+          />
+          <p className='formTitles'>Phone Number</p>
+          <input
+            className='formFields'
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
+          <p className='formTitles'>Username</p>
+          <input
+            className='formFields'
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <p className='formTitles'>Password</p>
+          <button type="submit" className='signupBtn'>Sign Up</button>
+        </form>
+      </div>
+    </>
   );
 };
 
