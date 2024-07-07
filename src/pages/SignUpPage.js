@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './css/signupPageCss.css'
 
 const SignUpPage = () => {
   const [firstName, setFirstName] = useState('');
@@ -31,7 +32,7 @@ const SignUpPage = () => {
       alert(result.data.message);
     } catch (error) {
       console.error('There was an error!', error);
-      
+
       if (error.response) {
         // The request was made and the server responded with a status code
         // that falls out of the range of 2xx
@@ -53,51 +54,59 @@ const SignUpPage = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-      type='text'
-      placeholder='First Name'
-      value={firstName}
-      onChange={(e) => setFirstName(e.target.value)}
-      required
-      />
-      <input
-      type='text'
-      placeholder='Last Name'
-      value={lastName}
-      onChange={(e) => setLastName(e.target.value)}
-      required
-      />
-      <input
-      type='email'
-      placeholder='Email'
-      value={email}
-      onChange={(e) => setEmail(e.target.value)}
-      required
-      />
-      <input
-        type="tel"
-        placeholder="Phone Number"
-        value={phoneNumber}
-        onChange={(e) => setPhoneNumber(e.target.value)}
-        required
-      />
-      <input
-        type="text"
-        placeholder="Username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        required
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-      />
-      <button type="submit">Sign Up</button>
-    </form>
+    <div className='formContainer'>
+      <form onSubmit={handleSubmit} className='form'>
+        <input
+          className='formFields'
+          type='text'
+          placeholder='First Name'
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
+          required
+        />
+        <input
+          className='formFields'
+          type='text'
+          placeholder='Last Name'
+          value={lastName}
+          onChange={(e) => setLastName(e.target.value)}
+          required
+        />
+        <input
+          className='formFields'
+          type='email'
+          placeholder='Email'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <input
+          className='formFields'
+          type="tel"
+          placeholder="Phone Number"
+          value={phoneNumber}
+          onChange={(e) => setPhoneNumber(e.target.value)}
+          required
+        />
+        <input
+          className='formFields'
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          required
+        />
+        <input
+          className='formFields'
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <button type="submit" className='signupBtn'>Sign Up</button>
+      </form>
+    </div>
   );
 };
 

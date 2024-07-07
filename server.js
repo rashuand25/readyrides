@@ -1,41 +1,24 @@
 const express = require('express');
 const cors = require('cors');
-const bodyParser = require('body-parser');
 const app = express();
-const port = 3001;
-const db = require('./src/server/dbConnection');
+const port = 3001
 
 // Middleware setup
 app.use(cors()); // Configure CORS before routes
+app.use(express.json()); // Parse JSON requests
+app.use('/images', express.static('src/images')); //Set up static server for images
+app.use(express.urlencoded({ extended: true })); // Parse URL-encoded requests
 
-// Body parser middleware
-app.use(bodyParser.json());
+// Importing route files
+const signupRoutes = require('./src/routes/signUpRoute');
+const vehicleRoute = require('./src/routes/vehicleRoute');
+const feedbackRoute = require('./src/routes/feedbackRoute')
 
-// Import route files
-const signupRoutes = require('./src/server/routes/signUpRoute');
-
-// Use the routes
+// Using the routes
 app.use('/', signupRoutes);
+app.use('/vehicles', vehicleRoute); // specifying the path for vehicleRoute
+app.use('/', feedbackRoute);
 
-// Error handling middleware
-app.use((err, req, res, next) => {
-  console.error(err); // Log the error to the console
-
-  let statusCode = 500;
-  let message = 'Internal server error';
-
-  if (err instanceof SyntaxError) {
-    statusCode = 400;
-    message = 'Bad Request: Invalid JSON data';
-  } else if (err.name === 'UnauthorizedError') {
-    statusCode = 401;
-    message = 'Unauthorized: Invalid token';
-  } // Add more custom error handling as needed
-
-  res.status(statusCode).send({ status: statusCode, message });
-});
-
-// Start the server
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
-const db = require('../dbConnection.js');
+const db = require('../server/dbConnection.js');
 
 router.post('/signup', async (req, res) => {
   try {

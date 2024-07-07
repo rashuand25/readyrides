@@ -1,0 +1,11 @@
+/*Had to adjust line-height here. could not do it inline with the media query. Inline style has a higher specificitty and will always override any external css*/
+
+.cardsText {
+  line-height: 3;
+}
+
+@media (max-width: 450px) {
+  .cardsText {
+    line-height: 1;
+  }
+}

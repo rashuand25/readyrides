@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '../components/footerComponent';
 
 const ErrorPage = () => {
     return (
@@ -14,7 +13,6 @@ const ErrorPage = () => {
                 <h1>errorPage</h1>
                 <p>Oops! Something went wrong. Please try again later.</p>
             </div>
-            <Footer />
         </>
     );
 }
