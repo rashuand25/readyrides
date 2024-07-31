@@ -6,8 +6,9 @@ import ContactUs from './pages/contactPage';
 import HomePage from './pages/homePage';
 import ErrorPage from './pages/errorPage';
 import AboutPage from './pages/aboutPage';
+import AllVehiclePage from './pages/allCarsPage';
+import SingleVehiclePage from './pages/singleVehiclePage';
 import NavBarComponent from './components/navBarComponent';
-import VehiclePage from './pages/vehiclePage';
 import Footer from './components/footerComponent';
 
 const App = () => {
@@ -22,14 +23,15 @@ const App = () => {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contactUs" element={<ContactUs />} />
             <Route path="/errorPage" element={<ErrorPage />} />
-            <Route path="/vehicles" element={<VehiclePage/>}/>
+            <Route path="/vehicles" element={<AllVehiclePage />} />
+            <Route path="/car/:id" element={<SingleVehiclePage />} />
           </Routes>
         </div>
-        <Footer style={{ marginTop: '6rem' }} />
+        <Footer style={{ marginTop: '1rem' }} />
       </div>
-      
+
     </Router>
-    
+
   );
 };
 
